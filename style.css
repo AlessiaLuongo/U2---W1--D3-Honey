@@ -15,14 +15,21 @@ nav ul {
   justify-content: space-around;
   list-style: none;
   align-items: center;
+  font-size: 0.5em;
 }
-
+ul {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+ul img {
+  width: 30%;
+}
 nav ul li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 3em;
-  width: 12%;
+  height: 2em;
+  width: 8%;
   background-color: #f3df85;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
@@ -36,6 +43,10 @@ li:nth-child(3) {
   height: 70%;
   font-weight: 700;
   font-size: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 li a {
@@ -87,12 +98,12 @@ main {
   align-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-left: 10em;
+  padding-left: 3em;
 }
 span {
   display: flex;
   flex-direction: row-reverse;
-  padding-right: 6em;
+  padding-right: 3em;
   color: #5e4237f2;
   font-size: 1.5em;
 }
