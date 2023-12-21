@@ -9,34 +9,46 @@ nav {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
+
 nav ul {
   height: 10em;
   display: flex;
-  justify-content: space-around;
   list-style: none;
   align-items: center;
   font-size: 0.5em;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-content: stretch;
+  justify-content: center;
 }
+
 ul {
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
 ul img {
   width: 30%;
+  margin-left: 0.2em;
 }
+li:nth-child(3) a {
+  margin-left: 0.5em;
+}
+
 nav ul li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 2em;
+  height: 3em;
   width: 8%;
   background-color: #f3df85;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  padding-left: 1.2em;
-  padding-right: 1.2em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 li:nth-child(3) {
   width: 15%;
@@ -47,6 +59,7 @@ li:nth-child(3) {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  order: 1;
 }
 
 li a {
@@ -55,11 +68,16 @@ li a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1.2em;
 }
 main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+section {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 #pic-div img {
@@ -128,7 +146,7 @@ span {
 aside {
   margin: 2em 0em;
   padding: 2em;
-  width: 70%;
+  width: 85%;
   background-color: #fbf7e3;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
@@ -155,4 +173,114 @@ h3 {
   justify-content: center;
   color: #5e4237f2;
   font-weight: 700;
+}
+
+@media screen and (min-width: 700px) {
+  nav ul {
+    height: 10em;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    font-size: 0.5em;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  li:nth-child(3) {
+    order: 0;
+  }
+}
+
+.logo-separatore {
+  display: none;
+}
+
+@media screen and (max-width: 790px) {
+  .logo-separatore {
+    display: block;
+    width: 5em;
+    border: 3px solid #f3df85;
+    padding: 2em;
+    border-radius: 50%;
+  }
+
+  .logo-separatore img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav ul {
+    height: 10em;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    font-size: 0.8em;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  li:nth-child(3) {
+    width: 10%;
+    height: 80%;
+  }
+
+  aside {
+    margin: 2em 0em;
+    padding: 2em;
+    width: 40%;
+    background-color: #fbf7e3;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+  }
+  main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  #story-div p {
+    margin-bottom: 4em;
+  }
+  h3 {
+    font-size: 2.3em;
+    margin-top: 0;
+  }
+  #card button {
+    color: #876255f2;
+    background-color: #f3df85;
+    border-style: none;
+    width: 40%;
+    height: 2em;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: 2.2em;
+  }
+}
+
+/* TRANSITIONS ETC ETC */
+
+#card button:hover {
+  transform: scale(1.3);
+}
+
+nav ul li a:hover {
+  transform: scale(1.3);
+}
+
+@media screen and (min-width: 1200px) {
+  #card button:hover {
+    transform: scale(1.3);
+  }
+
+  nav ul li a:hover {
+    transform: scale(1.3);
+  }
 }
